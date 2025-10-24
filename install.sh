@@ -7,6 +7,7 @@ else
   apt-get update && apt-get install -y python3 
   apt-get install -y python3-pip pipx
   pipx ensurepath
+  echo "echoing License file"
   cat /var/www/onlyoffice/Data/license.lic
   rm -f /var/www/onlyoffice/Data/license.lic
     
