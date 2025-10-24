@@ -4,10 +4,10 @@ FILE=OO_PubKey
 if test -f "$FILE"; then
   echo Patch has already been applied. Starting DocumentServer...
 else
-  apt-get update && apt-get install -y python3.7 
-    wget https://bootstrap.pypa.io/get-pip.py
-    python3.7 get-pip.py
-    pip install pycrypto
+  apt-get update && apt-get install -y python3 
+    apt-get install -y python3-pip
+    # python3 get-pip.py
+    python3 -m install pycrypto
     rm -f /var/www/onlyoffice/Data/license.lic
     
     cat <<EOF > index.py
@@ -87,7 +87,7 @@ for file in files:
 
 EOF
 
-    python3.6 index.py
+    python3 index.py
 
     echo Patching docservice and convert...
 
