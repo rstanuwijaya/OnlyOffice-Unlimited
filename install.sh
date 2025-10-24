@@ -7,7 +7,7 @@ else
   apt-get update && apt-get install -y python3 
     apt-get install -y python3-pip
     # python3 get-pip.py
-    python3 -m install pycrypto
+    python3 -m pip install pycrypto
     rm -f /var/www/onlyoffice/Data/license.lic
     
     cat <<EOF > index.py
