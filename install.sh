@@ -6,7 +6,8 @@ if test -f "$FILE"; then
 else
   apt-get update && apt-get install -y python3 
   apt-get install -y python3-pip pipx
-  pipx ensurepath    rm -f /var/www/onlyoffice/Data/license.lic
+  pipx ensurepath    
+  rm -f /var/www/onlyoffice/Data/license.lic
     
     cat <<EOF > index.py
 from Crypto.Hash import SHA, SHA256
